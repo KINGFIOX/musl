@@ -234,4 +234,8 @@ clean:
 distclean: clean
 	rm -f config.mak
 
-.PHONY: all clean install install-libs install-headers install-tools
+format:
+	python3 clang-format.py
+
+.PHONY: all clean install install-libs install-headers install-tools format
+
