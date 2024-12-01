@@ -9,8 +9,7 @@ def format_files(path : Path):
         if file.is_file() and file.suffix in c_extensions:
             os.system("clang-format -i -style=file " + str(file))
 
-# paths = ["src", "crt", "ldso"]
-paths = [ "compat", "arch", "include" ]
+paths = [ "arch", "compat", "crt", "include", "ldso", "src" ]
 
 if __name__ == "__main__":
     for path in paths:

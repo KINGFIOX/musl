@@ -2,7 +2,4 @@
 #include "libc.h"
 #include "syscall.h"
 
-int setegid(gid_t egid)
-{
-	return __setxid(SYS_setresgid, -1, egid, -1);
-}
+int setegid(gid_t egid) { return __setxid(SYS_setresgid, -1, egid, -1); }

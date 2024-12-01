@@ -2,7 +2,4 @@
 #include <sched.h>
 #include "syscall.h"
 
-int setns(int fd, int nstype)
-{
-	return syscall(SYS_setns, fd, nstype);
-}
+int setns(int fd, int nstype) { return syscall(SYS_setns, fd, nstype); }

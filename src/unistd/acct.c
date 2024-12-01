@@ -2,7 +2,4 @@
 #include <unistd.h>
 #include "syscall.h"
 
-int acct(const char *filename)
-{
-	return syscall(SYS_acct, filename);
-}
+int acct(const char *filename) { return syscall(SYS_acct, filename); }

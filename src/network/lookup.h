@@ -8,33 +8,33 @@
 #include <netdb.h>
 
 struct aibuf {
-	struct addrinfo ai;
-	union sa {
-		struct sockaddr_in sin;
-		struct sockaddr_in6 sin6;
-	} sa;
-	volatile int lock[1];
-	short slot, ref;
+  struct addrinfo ai;
+  union sa {
+    struct sockaddr_in sin;
+    struct sockaddr_in6 sin6;
+  } sa;
+  volatile int lock[1];
+  short slot, ref;
 };
 
 struct address {
-	int family;
-	unsigned scopeid;
-	uint8_t addr[16];
-	int sortkey;
+  int family;
+  unsigned scopeid;
+  uint8_t addr[16];
+  int sortkey;
 };
 
 struct service {
-	uint16_t port;
-	unsigned char proto, socktype;
+  uint16_t port;
+  unsigned char proto, socktype;
 };
 
 #define MAXNS 3
 
 struct resolvconf {
-	struct address ns[MAXNS];
-	unsigned nns, attempts, ndots;
-	unsigned timeout;
+  struct address ns[MAXNS];
+  unsigned nns, attempts, ndots;
+  unsigned timeout;
 };
 
 /* The limit of 48 results is a non-sharp bound on the number of addresses

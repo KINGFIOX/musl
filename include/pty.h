@@ -1,5 +1,5 @@
-#ifndef	_PTY_H
-#define	_PTY_H
+#ifndef _PTY_H
+#define _PTY_H
 
 #ifdef __cplusplus
 extern "C" {

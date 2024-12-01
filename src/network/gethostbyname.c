@@ -5,7 +5,4 @@
 #include <string.h>
 #include <netinet/in.h>
 
-struct hostent *gethostbyname(const char *name)
-{
-	return gethostbyname2(name, AF_INET);
-}
+struct hostent *gethostbyname(const char *name) { return gethostbyname2(name, AF_INET); }
